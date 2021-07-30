@@ -16,11 +16,11 @@ jobs:
           filename: base.svg
           base: header, community, repositories
           config_timezone: Europe/Berlin
-          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
-          plugin_pagespeed: yes
-          plugin_pagespeed_detailed: no # Print detailed audit metrics
-          plugin_pagespeed_screenshot: no # Display a screenshot of your website
-          plugin_pagespeed_url: gcampes.tech # Website to audit (defaults to your GitHub linked website)
+          plugin_habits: yes
+          plugin_habits_from: 200 # Use 200 events to compute habits
+          plugin_habits_days: 14 # Keep only events from last 14 days
+          plugin_habits_facts: yes # Display facts section
+          plugin_habits_trim: yes # Trim unused hours on daily chart
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -34,6 +34,11 @@ jobs:
           plugin_languages_recent.load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
+          plugin_pagespeed: yes
+          plugin_pagespeed_detailed: no # Print detailed audit metrics
+          plugin_pagespeed_screenshot: no # Display a screenshot of your website
+          plugin_pagespeed_url: gcampes.tech # Website to audit (defaults to your GitHub linked website)
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
