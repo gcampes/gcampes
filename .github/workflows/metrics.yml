@@ -27,9 +27,7 @@ jobs:
           filename: commits.svg
           base: ""
           plugin_isocalendar: yes
-          plugin_notable: yes
-          plugin_notable_filter: stars:>500 # Only display repositories with 500 stars or more (syntax based on GitHub search query)
-          plugin_notable_repositories: yes     # Display repositories name instead of only organization name
+          plugin_discussions: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
           plugin_pagespeed: yes
           plugin_pagespeed_detailed: no # Print detailed audit metrics
