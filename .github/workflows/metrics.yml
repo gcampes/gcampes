@@ -27,7 +27,6 @@ jobs:
           filename: commits.svg
           base: ""
           plugin_isocalendar: yes
-          plugin_discussions: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
           plugin_pagespeed: yes
           plugin_pagespeed_detailed: no # Print detailed audit metrics
