@@ -31,7 +31,7 @@ jobs:
           plugin_pagespeed: yes
           plugin_pagespeed_detailed: no # Print detailed audit metrics
           plugin_pagespeed_screenshot: no # Display a screenshot of your website
-          plugin_pagespeed_url: gcampes.com # Website to audit (defaults to your GitHub linked website)
+          plugin_pagespeed_url: gcampes.me # Website to audit (defaults to your GitHub linked website)
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
